@@ -10,15 +10,15 @@ Build-Depends: debhelper (>= 9),
  libexpat1-dev,
  libpam0g-dev,
  libselinux1-dev,
- libmozjs-17.0-dev,
+ libmozjs185-dev,
  gtk-doc-tools,
  xsltproc,
  libgirepository1.0-dev (>= 0.9.12),
  gobject-introspection (>= 0.9.12-4~),
  libglib2.0-doc,
  libgtk-3-doc,
- libsystemd-login-dev
-Standards-Version: 3.9.5
+ libsystemd-dev
+Standards-Version: 3.9.6
 Vcs-Git: git://anonscm.debian.org/pkg-utopia/policykit.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-utopia/policykit.git;a=summary
 Homepage: http://www.freedesktop.org/wiki/Software/polkit
@@ -27,7 +27,7 @@ Package: policykit-1
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends},
-  libpam-systemd, consolekit,
+  libpam-systemd [linux-any], consolekit [!linux-any],
   dbus, adduser
 Multi-Arch: foreign
 Breaks: gdm3 (<< 3.8.4-7~)
