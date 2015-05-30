@@ -1,3 +1,10 @@
+policykit-1 (0.112-5blankon2) tambora; urgency=medium
+
+  * Fixed #1470:
+    - Add dpkg-vendor for BlankOn to handle rules polkit-1
+
+ -- Mahyuddin <yudi.al@gmail.com>  Sat, 30 May 2015 13:54:44 +0700
+
 policykit-1 (0.112-5blankon1) tambora; urgency=medium
 
   * New upstream release

@@ -40,4 +40,6 @@ override_dh_install:
 	    sed 's/@admin@/"unix-group:sudo", "unix-group:admin"/' debian/admin.rules.in > debian/policykit-1/etc/polkit-1/rules.d/40-ubuntu-admin.rules; \
 	elif dpkg-vendor --is debian; then \
 	    sed 's/@admin@/"unix-group:sudo"/' debian/admin.rules.in > debian/policykit-1/etc/polkit-1/rules.d/40-debian-sudo.rules; \
+	elif dpkg-vendor --is blankon; then \
+	    sed 's/@admin@/"unix-group:sudo"/' debian/admin.rules.in > debian/policykit-1/etc/polkit-1/rules.d/40-blankon-sudo.rules; \
 	fi
